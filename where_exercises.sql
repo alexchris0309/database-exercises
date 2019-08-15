@@ -6,7 +6,7 @@ Select * FROM employees where last_name like 'e%';
 
 # Find all employees hired in the 90s — 135,214 rows.
 
-Select * FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
+Select * FROM employees WHERE hire_date like '199%';
 
 # Find all employees born on Christmas — 842 rows.
 
