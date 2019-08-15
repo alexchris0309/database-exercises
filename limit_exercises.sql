@@ -9,4 +9,3 @@ ORDER BY birth_date ASC,hire_date DESC
 limit 5
 offset 45;
 
-
