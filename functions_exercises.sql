@@ -1,8 +1,8 @@
 USE employees;
 
 Select * FROM employees WHERE gender='M'AND (first_name ='Irena'OR first_name='Vidya'OR first_name='Maya')
-Order by last_name DESC , first_name DESC
-select concat(last_nae)
+Order by last_name DESC , first_name DESC;
+# select concat(last_name)
 
 
 Select * FROM employees where last_name like 'e%'

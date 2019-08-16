@@ -8,5 +8,7 @@ name VARCHAR (50) NOT NULL,
 release_date YEAR(4),
 sales FLOAT,
 genre VARCHAR (100),
-PRIMARY KEY (id)
+PRIMARY KEY (id),
+UNIQUE (name, artist)
+
 );
