@@ -18,9 +18,21 @@ from titles as t
 join employees as e on t.emp_no =e.emp_no
 join dept_emp as de on e.emp_no = de.emp_no
 join departments d on de.dept_no = d.dept_no
-WHERE t.to_date='9999-01-01' AND d.dept_name='Customer Service'
+WHERE t.to_date>now() AND d.dept_name='Customer Service'
 GROUP BY t.title
 ORDER BY t.title ASC;
+
+# Fer's example of how to get title didn't have to go through the employees '
+select t.title ,count(t.title) AS 'count'
+from titles t
+join dept_emp de on de.emp_no=t.emp_no
+join departments d on de.dept_no=d.dept_no
+where t.to_date>now()
+AND d.dept_name ='customer service'
+AND de.to_date > now()
+group by t.title;
+
+
 
 
 
